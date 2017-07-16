@@ -15,6 +15,9 @@ STATUS_MESSAGES = ["'My name is Bond, James Bond'", "'Shaken, not stirred.'", "'
 
 question = "Do you want to continue as " + spy.salutation + " " + spy.name + " (Y/N)? "
 existing = raw_input(question)
+if existing != 'Y' or existing != 'N':
+    prRed('Wrong Input! Try Again')
+    existing = raw_input(question)
 
 #START Function to add status in SpyChat
 def add_status():
